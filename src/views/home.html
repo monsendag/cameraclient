@@ -1,0 +1,150 @@
+
+<accordion class="settings" close-others="oneAtATime">
+  <accordion-group is-open="state.capture">
+    <accordion-heading>
+      Capture settings <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': state.capture, 'glyphicon-chevron-right': !state.capture}"></i>
+    </accordion-heading>
+    This is just some content to illustrate fancy headings.
+
+
+  <form ng-submit="getImage()">
+
+    <fieldset ng-disabled="loading">
+
+      <div class="orientation row">
+        <label> rotation
+          <select ng-model="params.rotation" ng-options="rotation for rotation in rotations"></select>
+        </label>
+        <label>
+          <input ng-model="params.vflip" type="checkbox">vertical flip
+        </label>
+        <label>
+          <input ng-model="params.hflip" type="checkbox">horizontal flip
+        </label>
+      </div>
+
+      <div class="resolution row">
+        <label>resolution
+          <input ng-model="params.width" type=number> X
+          <input ng-model="params.height" type=number>
+        </label>
+      </div>
+      
+      <hr>
+
+      <div class="sliderpair iso">
+        <label>iso</label>
+        <label class="auto">
+          auto
+        <input ng-model="auto_iso" type="checkbox">
+        </label>
+        <input ng-model="params.iso" type=range min=0 max=1600 step=20 ng-disabled="auto_iso">
+        <input id="iso" ng-model="params.iso" type="text" ng-disabled="auto_iso">
+      </div>
+
+      <div class="row sliderpair shutter">
+        <label>
+          shutter speed
+        </label>
+        <label class="auto"> auto
+          <input ng-model="auto_shutter" type="checkbox">
+        </label>
+        <input ng-model="params.shutter_speed" type=number ng-disabled="auto_shutter"> µsec
+      </div>
+
+      <hr>
+      
+      <div class="row sliderpair">
+        <label>
+        contrast
+        </label>
+        <input ng-model="params.contrast" type="range" min=-100 max=100>
+        <input ng-model="params.contrast" type="text">
+      </div>
+      
+      <div class="row sliderpair">
+        <label>
+        brightness
+        </label>
+        <input ng-model="params.brightness" type="range" min=0 max=100>
+        <input ng-model="params.brightness" type="text">
+      </div>
+
+      <div class="row sliderpair">
+        <label>
+        saturation
+      </label>
+        <input ng-model="params.saturation" type=range min=-100 max=100 step=5>
+        <input ng-model="params.saturation" type=text>
+      </div>
+
+      <div class="row sliderpair">
+        <label>
+          sharpness
+        </label>
+        <input ng-model="params.sharpness" type=range min=-100 max=100 step=5>
+        <input ng-model="params.sharpness" type="text">
+      </div>
+      
+      <hr>
+
+      <div class="row">
+        <label>
+          white balance
+          <select ng-model="params.awb_mode" ng-options="mode for mode in awb_modes"></select>
+        </label>
+        <label>
+          metering mode
+          <select ng-model="params.metering_mode" ng-options="mode for mode in metering_modes"></select>
+        </label>
+      </div>
+
+
+      <div class="row">
+        <label>
+          dynamic range compression strength
+          <select ng-model="params.drc_strength" ng-options="strength for strength in drc_strengths"></select>
+        </label>
+      </div>
+
+      <div class="row">
+        <label>
+          image effect
+          <select ng-model="params.image_effect" ng-options="effect for effect in image_effects"></select>
+        </label>
+      </div>
+      <div class="row sliderpair">
+        <label>
+          jpeg quality
+        </label>
+          <input ng-model="params.quality" type="range" min=1 max=100>
+          <input data-ng-model="params.quality" type="text">
+      </div>
+      <div class="row">
+        <label>Host
+          <input ng-model="params.hostname" type="text" value="">
+        </label>
+      </div>
+      <input type="submit" value="shoot!">
+    </fieldset>
+  </form>
+
+</div>
+
+</accordion-group>
+  <accordion-group is-open="state.timelapse">
+    <accordion-heading>
+      Timelapse settings <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': state.timelapse, 'glyphicon-chevron-right': !state.timelapse}"></i>
+    </accordion-heading>
+    
+    New timelapse:
+    The format is defined  <a href="http://bunkat.github.io/later/parsers.html#text">here</a>
+    
+    <textarea>
+    
+    </textarea>
+    
+    hey ho timelapse yo
+  </accordion>
+  
+  

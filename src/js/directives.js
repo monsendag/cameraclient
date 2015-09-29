@@ -1,0 +1,6 @@
+define([
+    'services'],
+    function() {
+
+        //
+});

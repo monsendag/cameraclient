@@ -1,0 +1,82 @@
+{
+  "baseUrl": "src/js",
+  "shim": {
+    "angular": {
+      "exports": "angular"
+    },
+    "angular-bootstrap": {
+      "deps": [
+        "angular"
+      ]
+    },
+    "angular-resource": {
+      "deps": [
+        "angular"
+      ]
+    },
+    "angular-ui-router": {
+      "deps": [
+        "angular"
+      ]
+    },
+    "angular-ui-layout": {
+      "deps": [
+        "angular"
+      ]
+    },
+    "angular-ui-select": {
+      "deps": [
+        "angular"
+      ]
+    },
+    "angular-sanitize": {
+      "deps": [
+        "angular"
+      ]
+    },
+    "angular-i18n": {
+      "deps": [
+        "angular"
+      ]
+    },
+    "angular-bootstrap-nav-tree": {
+      "deps": [
+        "angular"
+      ]
+    },
+    "angular-lodash": {
+      "deps": [
+        "angular",
+        "lodash"
+      ]
+    }
+  },
+  "findNestedDependencies": false,
+  "paths": {
+    "almond": "../bower_components/almond/almond",
+    "angular": "../bower_components/angular/angular",
+    "angular-bootstrap": "../bower_components/angular-bootstrap/ui-bootstrap-tpls",
+    "angular-bootstrap-nav-tree": "../bower_components/angular-bootstrap-nav-tree/dist/abn_tree_directive",
+    "bootstrap": "../bower_components/bootstrap/dist/js/bootstrap",
+    "angular-i18n": "../bower_components/angular-i18n/angular-locale_no-no",
+    "angular-lodash": "../bower_components/angular-lodash/angular-lodash",
+    "lodash": "../bower_components/lodash/dist/lodash.compat",
+    "angular-resource": "../bower_components/angular-resource/angular-resource",
+    "angular-sanitize": "../bower_components/angular-sanitize/angular-sanitize",
+    "angular-ui-layout": "../bower_components/angular-ui-layout/ui-layout",
+    "raf": "../bower_components/raf/index",
+    "angular-ui-router": "../bower_components/angular-ui-router/release/angular-ui-router",
+    "angular-ui-select": "../bower_components/angular-ui-select/dist/select",
+    "jquery": "../bower_components/jquery/dist/jquery",
+    "toastr": "../bower_components/toastr/toastr",
+    "videojs": "../bower_components/videojs/dist/video-js/video",
+    "videojs-contrib-hls": "../bower_components/videojs-contrib-hls/videojs.hls.min",
+    "videojs-contrib-media-sources": "../bower_components/videojs-contrib-media-sources/videojs-media-sources"
+  },
+  "packages": [],
+  "configFile": null,
+  "exclude": [],
+  "excludeShallow": [],
+  "loader": null,
+  "wrapShim": true
+}

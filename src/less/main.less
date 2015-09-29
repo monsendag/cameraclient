@@ -1,0 +1,91 @@
+html {
+  padding: 0;
+  margin: 0;
+  background: url(../images/default-background.jpg) no-repeat center center fixed;
+  background-size: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  background: transparent !important;
+  position:relative;
+}
+
+.settings {
+  position: absolute;
+  background: transparent;
+  width: 20%;
+  min-width: 420px;
+  max-width: 600px;
+  background-color: rgba(0,0,0,0.4);
+  left: 0;
+  margin:0;
+  color: #fff;
+  padding: 5px 5px 0px 5px;
+  border-radius: 5px;
+}
+
+.settings .panel {
+  background: transparent;
+  border: none;
+}
+
+.settings input, .settings textarea {
+  color: #000;
+}
+
+.settings textarea {
+  width: 100%;
+  min-height: 20
+}
+
+.sliderpair {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.sliderpair > input[type=text] {
+  width: 50px;
+}
+
+input[type=submit] {
+  width: 100%;
+  background: white url(../images/shoot.svg) 10% no-repeat;
+  background-size: 70% 70%;
+  font-size: 1.2em;
+}
+
+.settings .row {
+  margin: 5px 0;
+}
+
+.orientation > label {
+    padding: 2px;
+    margin: 0 8px;
+}
+
+.orientation input {
+  margin: 0px;
+}
+
+.resolution input {
+  width: 30%;
+}
+
+label.auto {
+  text-align: center;
+}
+
+fieldset[disabled] input {
+  color: grey;
+}
+
+.sliderpair label {
+  min-width: 120px;
+}

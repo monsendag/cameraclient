@@ -1,0 +1,12 @@
+<ui-select ng-model="selected"
+           theme="bootstrap"
+           ng-disabled="disabled"
+           reset-search-input="true"
+           on-select="onSelect($item, $model)">
+    <ui-select-match placeholder="Søk etter vare..."></ui-select-match>
+    <ui-select-choices repeat="result in results track by $index"
+                       refresh="search($select.search)"
+                       refresh-delay="0">
+        <div ng-bind-html="result.varetekst | highlight: $select.search"></div>
+    </ui-select-choices>
+</ui-select>

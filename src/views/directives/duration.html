@@ -1,0 +1,8 @@
+<input integer
+       type=number
+       value=0
+       min=0
+       max=60
+       ng-repeat-start="unit in units"
+       ng-model="unit.value">
+<span ng-repeat-end>{{unit.label}}</span>
